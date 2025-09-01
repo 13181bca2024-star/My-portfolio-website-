@@ -3,95 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shahidha Afrose.A Portfolio</title>
+  <title>Shahidha Afrose.A - Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      background: linear-gradient(135deg, #6dd5fa, #2980b9);
       color: #333;
     }
     header {
       background-color: #333;
       color: white;
-      padding: 20px 0;
+      padding: 20px 0 10px 0;
       text-align: center;
     }
     header h1 {
       margin: 0;
+      font-size: 2.7rem;
+      letter-spacing: 1px;
     }
     nav {
       margin-top: 10px;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin: 0 14px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1.1rem;
+      transition: text-decoration 0.2s;
     }
-    nav a:hover {
-      text-decoration: underline;
+    nav a:hover { text-decoration: underline; }
+    .hero {
+      text-align: center;
+      margin: 38px auto 0 auto;
+      background: white;
+      padding: 45px 30px 32px 30px;
+      border-radius: 15px;
+      max-width: 480px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.10);
+    }
+    .hero h2 {
+      color: #0073e6;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .hero p {
+      font-size: 19px;
+      color: #444;
+      margin: 4px 0;
+    }
+    .hero .links {
+      margin-top: 18px;
+    }
+    .hero a {
+      display: inline-block;
+      margin: 10px 9px 0 9px;
+      text-decoration: none;
+      color: white;
+      background: #0073e6;
+      padding: 12px 27px;
+      border-radius: 50px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .hero a:hover {
+      background: #005bb5;
+      transform: translateY(-2px);
+      box-shadow: 0px 5px 12px rgba(0,0,0,0.12);
     }
     section {
-      max-width: 900px;
-      margin: 30px auto;
+      max-width: 920px;
+      margin: 32px auto;
       background: white;
-      padding: 20px;
-      border-radius: 8px;
+      padding: 22px 25px;
+      border-radius: 9px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
     h2 {
-      border-bottom: 2px solid #333;
-      padding-bottom: 5px;
+      border-bottom: 2px solid #0073e6;
+      padding-bottom: 4px;
+      margin-bottom: 19px;
+      color: #0073e6;
+      font-size: 1.5rem;
     }
     .projects {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 18px;
+      justify-content: center;
     }
     .project {
-      flex: 1 1 250px;
+      flex: 1 1 240px;
+      max-width: 310px;
       background: #eaeaea;
-      padding: 15px;
-      border-radius: 5px;
+      padding: 16px 13px;
+      border-radius: 7px;
+      box-sizing: border-box;
     }
-    .skills ul {
+    .project h3 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+    .project a.button {
+      display: inline-block;
+      background: #333;
+      color: white;
+      padding: 8px 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 9px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .project a.button:hover { background: #555; }
+    /* Dynamic skills styling */
+    .skills-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+    }
+    .skills-list li {
+      background: #ddd;
+      margin: 5px 7px 5px 0;
+      padding: 9px 15px;
+      border-radius: 18px;
+      display: inline-block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      font-family: Verdana, Arial, sans-serif;
+    }
+    /* Contact section styling */
+    #contact ul {
       list-style: none;
       padding: 0;
     }
-    .skills li {
-      background: #ddd;
-      margin: 5px 0;
-      padding: 8px;
-      border-radius: 4px;
-      display: inline-block;
-      margin-right: 8px;
+    #contact li {
+      margin: 7px 0;
+      font-size: 1.02rem;
     }
+    #contact a {
+      color: #0077cc;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    #contact a:hover { text-decoration: underline; }
     footer {
       background: #333;
       color: white;
       text-align: center;
-      padding: 15px 0;
-      margin-top: 40px;
+      padding: 18px 0 15px 0;
+      margin-top: 38px;
+      font-size: 1rem;
+      letter-spacing: 0.2px;
     }
-    a.button {
-      display: inline-block;
-      background: #333;
-      color: white;
-      padding: 10px 15px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-    a.button:hover {
-      background: #555;
+    @media (max-width: 1000px) {
+      .projects { flex-direction: column; align-items: center; }
+      section { padding: 14px 9px; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Shahidha Afrose.A</h1>
+  <h1>SHAHIDHA AFROSE.A</h1>
   <nav>
     <a href="#about">About Me</a>
     <a href="#projects">Projects</a>
@@ -100,9 +177,19 @@
   </nav>
 </header>
 
+<div class="hero">
+  <h2>Frontend Web Developer</h2>
+  <p><strong>II BCA - B</strong></p>
+  <p>Hi! I'm Shahidha Afrose.A, passionate about web development and building modern, responsive websites and applications.</p>
+  <div class="links">
+    <a href="https://www.google.com" target="_blank" rel="noopener">Visit My Work</a>
+    <a href="https://github.com/13181bca2024-star" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div>
+
 <section id="about">
   <h2>About Me</h2>
-  <p>Hello! I'm Shahidha Afrose.A, a dedicated <strong>front-end web developer</strong> skilled in crafting responsive and engaging user interfaces. My passion lies in creating elegant designs and seamless user experiences using the latest web technologies.</p>
+  <p>Hi! I'm Shahidha Afrose.A, currently pursuing <strong>II BCA - B</strong>. I'm passionate about web development, love working with new technologies, and strive to build modern, responsive websites and applications.</p>
 </section>
 
 <section id="projects">
@@ -110,49 +197,72 @@
   <div class="projects">
     <div class="project">
       <h3>Portfolio Website</h3>
-      <p>A modern portfolio to present my front-end development work and coding projects.</p>
+      <p>A personal portfolio to showcase my skills and academic projects.</p>
       <a href="#" class="button" target="_blank" rel="noopener">View Project</a>
     </div>
     <div class="project">
       <h3>Todo App</h3>
-      <p>A user-friendly task management application featuring attractive UI and interactive elements.</p>
+      <p>A simple and user-friendly task management app built with JavaScript.</p>
       <a href="#" class="button" target="_blank" rel="noopener">View Project</a>
     </div>
     <div class="project">
       <h3>Blog Platform</h3>
-      <p>A client-side blog site including rich text editing and smooth navigation using React.</p>
+      <p>A full-stack blog platform with user authentication and rich text editor.</p>
       <a href="#" class="button" target="_blank" rel="noopener">View Project</a>
     </div>
   </div>
 </section>
 
-<section id="skills" class="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>HTML5</li>
-    <li>CSS3</li>
-    <li>JavaScript</li>
-    <li>React</li>
-    <li>Bootstrap</li>
-    <li>Git</li>
-  </ul>
+<section id="skills">
+  <!-- Filled by JS -->
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>You can reach me at:</p>
-  <ul>
-    <li>Email: shahidhaafrose@example.com</li>
-    <li>LinkedIn: <a href="https://linkedin.com/in/shahidhaafrose" target="_blank" rel="noopener">linkedin.com/in/shahidhaafrose</a></li>
-    <li>GitHub: <a href="https://github.com/shahidhaafrose" target="_blank" rel="noopener">github.com/shahidhaafrose</a></li>
-  </ul>
+  <!-- Filled by JS -->
 </section>
 
-<footer>
-  &copy; 2025 Shahidha Afrose.A. All rights reserved.
+<footer id="footer">
+  <!-- Filled by JS -->
 </footer>
+
+<script>
+  // Skills Data
+  const skills = ["HTML5", "CSS3", "JavaScript", "React", "Node.js", "Git"];
+
+  // Contact Data
+  const contactInfo = {
+    email: "13181bca2024@princescience.in",
+    linkedin: "Shahidha Afrose.A",
+    github: "https://github.com/13181bca2024-star"
+  };
+
+  // Footer Data
+  const year = new Date().getFullYear();
+  const name = "SHAHIDHA AFROSE.A - II BCA B";
+
+  // Render Skills Section
+  const skillsSection = document.getElementById("skills");
+  skillsSection.innerHTML = `
+    <h2>Skills</h2>
+    <ul class="skills-list">${skills.map(skill => `<li>${skill}</li>`).join("")}</ul>
+  `;
+
+  // Render Contact Section
+  const contactSection = document.getElementById("contact");
+  contactSection.innerHTML = `
+    <h2>Contact</h2>
+    <p>You can reach me at:</p>
+    <ul>
+      <li>Email: ${contactInfo.email}</li>
+      <li>LinkedIn: ${contactInfo.linkedin}</li>
+      <li>GitHub: <a href="${contactInfo.github}" target="_blank" rel="noopener">${contactInfo.github}</a></li>
+    </ul>
+  `;
+
+  // Render Footer
+  const footer = document.getElementById("footer");
+  footer.innerHTML = `&copy; ${year} ${name}. All rights reserved.`;
+</script>
 
 </body>
 </html>
-
- Added index.html
